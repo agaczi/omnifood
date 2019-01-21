@@ -1,0 +1,171 @@
+/*
+ORANGE COLOR: #e67e22
+*/
+
+
+/*-----------------------------------------------------------------------*/
+/*BASIC SETUP*/
+/*-----------------------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: gray;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    text-rendering: optimizeLegibility;
+
+}
+
+/*-----------------------------------------------------------------------*/
+/*FONTS*/
+/*-----------------------------------------------------------------------*/
+
+.thin {
+    font-weight: 100;
+    font-style: italic;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+/*-----------------------------------------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/*-----------------------------------------------------------------------*/
+
+/*everything will be centered:*/
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/*------------- HEADINGS -------------*/
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 240%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+/*here sudoclass link means how "a" element look like in a normal state. here it also means that all visited links will look like normal state.*/
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    /*when we hover over a buttons it will transit smoothly from one color to another"" */
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+/*------------- BUTTONS -------------*/
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: white;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+/*when I put my mouse on button I want it to change color:*/
+.btn:hover,
+.btn:active {
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #e67e22;
+}
+
+.btn-ghost:link,
+.btn-ghost:active {
+    border: 1px solid #e67e22;
+    color: white;
+}
+
+/*-----------------------------------------------------------------------*/
+/*HEADER*/
+/*-----------------------------------------------------------------------*/
+
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    /*100vh means 100% of view horeazon*/
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    height: 100px;
+    /*logo will be formatted automatically by height:*/
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    /*I don't want to have bullet points:*/
+    list-style: none;
+    margin-top: 55px;
+    word-spacing: 3px;
+}
+
+/*how to select all li emelements only in main-nav bar:*/
+.main-nav li {
+    /*I want them side-by-side:*/
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    /*Since I set the base font size as 20px I want them to be 18px so I do 18/20px = 0.9 = means it should be 90% of base font size:*/
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
+
